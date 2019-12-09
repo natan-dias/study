@@ -2,9 +2,9 @@
 $computerName = "srv-dc1"
 
 # Define the IPv4 Addressing
-$IPv4Address = "10.10.100.10"
+$IPv4Address = "10.0.0.10"
 $IPv4Prefix = "24"
-$IPv4GW = "10.10.100.1"
+$IPv4GW = "10.0.0.1"
 $IPv4DNS = "8.8.8.8"
 
 # Get the Network Adapter's Prefix
