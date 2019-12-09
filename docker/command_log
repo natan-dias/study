@@ -1,0 +1,7 @@
+Command log
+
+docker run -dit --name fedora_hd -v /git/natandino.github.io/:/usr/share/nginx/html/ -v /log/:/var/log/nginx/ -p 80:80 -p 443:443 fedora_hd
+
+
+sudo ssh -i amazon_key natandino@18.229.11.71
+
