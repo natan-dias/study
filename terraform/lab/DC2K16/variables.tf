@@ -11,4 +11,7 @@ variable "instance-tp" {
   default = "t2.micro"
 }
 
+variable "username" {
+  default = "admin"  
+}
 
