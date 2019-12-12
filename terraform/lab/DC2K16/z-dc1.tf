@@ -23,7 +23,11 @@ resource "aws_instance" "w2k16" {
     net user ${var.username} ${local.password} /add /y
     net localgroup administrators ${var.username} /add
     netsh advfirewall set allprofiles state off
-    winrm quickconfig -q    
+    winrm quickconfig
+    y
+    winrm set winrm/config/service/Auth '@{Basic="true"}'
+    winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+    winrm set winrm/config/winrs '@{MaxMemoryPerShellMB="1024"}'   
     net stop winrm
     sc.exe config winrm start=auto
     net start winrm
