@@ -8,7 +8,7 @@ variable "instance-tp" {
 }
 
 variable "username" {
-  default = "admin"  
+  default = "admin"
 }
 
 variable "cidr_block" {
