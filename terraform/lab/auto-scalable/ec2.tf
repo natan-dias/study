@@ -67,10 +67,20 @@ resource "aws_autoscaling_policy" "scaledown" {
   name                   = "ScaleDown"
   autoscaling_group_name = aws_autoscaling_group.main.name
   adjustment_type        = "ChangeInCapacity"
-  scaling_adjustment     = "1"
+  scaling_adjustment     = "-1"
   cooldown               = "300"
   policy_type            = "SimpleScaling"
 }
 
+resource "aws_instance" "jenkins" {
+  ami = var.ami
+  instance_type = var.instance-tp
+  
+  vpc_security_group_ids = ["${aws_security_group.db.id}"]
+  subnet_id = aws_subnet.private_b.id
+  availability_zone = "${var.region}c"
 
-
+  tags = {
+    Name = "Jenkins Instance"
+  }
+}

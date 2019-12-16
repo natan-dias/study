@@ -20,6 +20,6 @@ variable "ami" {
 }
 
 variable "key" {
-  default = "amazon_key"
+  default = "amazon_key_aws"
 }
 
