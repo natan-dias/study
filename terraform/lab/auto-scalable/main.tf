@@ -126,26 +126,26 @@ resource "aws_security_group" "web" {
   }
 
   egress {
-    from_port       = 3306
-    to_port         = 3306
-    protocol        = "tcp"
-    cidr_blocks     = ["192.168.3.0/24"]    
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["192.168.3.0/24"]
   }
 
   tags = {
-      Name = "Web Server"
+    Name = "Web Server"
   }
 }
 
 resource "aws_security_group" "db" {
-  name = "db"
+  name        = "db"
   description = "Allow incoming database connections"
-  vpc_id = aws_vpc.main.id
+  vpc_id      = aws_vpc.main.id
 
   ingress {
-    from_port   = 3306
-    to_port     = 3306
-    protocol    = "tcp"
+    from_port       = 3306
+    to_port         = 3306
+    protocol        = "tcp"
     security_groups = ["${aws_security_group.web.id}"]
   }
 
@@ -178,7 +178,7 @@ resource "aws_security_group" "db" {
   }
 
   tags = {
-      Name = "Database"
+    Name = "Database"
   }
 
 }
