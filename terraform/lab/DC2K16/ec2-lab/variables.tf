@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "ami-dc1" {
-  default = "ami-0b27170c41289fc50"
+  default = ""
 }
 
 variable "instance-tp" {
@@ -12,6 +12,6 @@ variable "instance-tp" {
 }
 
 variable "username" {
-  default = "admin"  
+  default = ""  
 }
 

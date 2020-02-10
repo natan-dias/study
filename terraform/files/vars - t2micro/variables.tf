@@ -4,15 +4,15 @@ variable "region" {
 }
 
 variable "access_key" {
-  default = "AKIA6E6ZWCNVDYLTG75P"
+  default = ""
 }
 
 variable "secret_key" {
-  default = "wb41fh4mtu0k/15HkDuH06OBrcNvaqg1qeGh+eYA"
+  default = ""
 }
 
 variable "ami" {
-    default = "ami-07820a4443539a2b0"
+    default = ""
   
 }
 

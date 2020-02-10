@@ -16,10 +16,10 @@ variable "cidr_block" {
 }
 
 variable "ami" {
-  default = "ami-0e2c2c29d8017dd99" #Amazon Linux
+  default = "" #Amazon Linux
 }
 
 variable "key" {
-  default = "amazon_key_aws"
+  default = ""
 }
 
