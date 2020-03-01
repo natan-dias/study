@@ -17,10 +17,13 @@
       
       <guid>/about.html</guid>
       <description>Hi everyone!
-We are a creation hub, started with a dream: Became a development studio!
-For now we can provide static sites for small and medium business.
-And now we are developing a mobile game in Python and GODOT Engine.
-Our Skills  Static Sites with Hugo Dynamic Sites with HTML, CSS and JS Programing with Go Programing with Python Game Dev with GODOT AWS and Docker Let&#39;s Encrypt certificate  </description>
+We are a creation HUB, started with a dream: To become a game and app development studio!
+We also work developing HTML+CSS+JS websites.
+For now we are developing a mobile game in Python and GODOT Engine. The game is called &amp;ldquo;E-Motions&amp;rdquo; and is already in open beta at google play store.
+Check our &amp;ldquo;Games&amp;rdquo; section to more information.
+Subscribe our channel to stay updated!
+YOUTUBE Hubdino
+Our Skills  Static Sites with Hugo Dynamic Sites with HTML, CSS and JS Programing with Go Programing with Python Game Dev with GODOT AWS and Docker Let&amp;rsquo;s Encrypt certificate!</description>
     </item>
     
     <item>
@@ -31,8 +34,6 @@ Our Skills  Static Sites with Hugo Dynamic Sites with HTML, CSS and JS Programin
       <guid>/games.html</guid>
       <description>Look up our Games!  E-Motions  A 2d plataform game made with GODOT Engine.
 Official Site
-Itch.io Site
- MAZES  Game made with GODOT and Procedural Code.
 Itch.io Site</description>
     </item>
     

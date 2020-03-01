@@ -13,12 +13,4 @@ A 2d plataform game made with GODOT Engine.
 
 [Official Site](https://hubdino.me/emotions/)
 
-[Itch.io Site]() 
-
-* [MAZES]()
-
-![IMG-mazes](mazes.png)
-
-Game made with GODOT and Procedural Code.
-
-[Itch.io Site]()
+[Itch.io Site](https://hubdinogames.itch.io/e-motions) 

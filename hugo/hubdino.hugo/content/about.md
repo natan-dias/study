@@ -5,11 +5,17 @@ slug = "about"
 
 Hi everyone!
 
-We are a creation hub, started with a dream: Became a development studio!
+We are a creation HUB, started with a dream: To become a game and app development studio!
 
-For now we can provide static sites for small and medium business.
+We also work developing HTML+CSS+JS websites.
 
-And now we are developing a mobile game in Python and GODOT Engine.
+For now we are developing a mobile game in Python and GODOT Engine. The game is called "E-Motions" and is already in open beta at google play store.
+
+Check our "Games" section to more information.
+
+Subscribe our channel to stay updated!
+
+[YOUTUBE Hubdino](https://www.youtube.com/channel/UCLFVeJNoZgIbIShtiPIE4xw)
 
 ## Our Skills
 
@@ -19,5 +25,5 @@ And now we are developing a mobile game in Python and GODOT Engine.
 * Programing with [Python](https://www.python.org/)
 * Game Dev with [GODOT](https://godotengine.org/)
 * [AWS](https://aws.amazon.com) and [Docker](https://www.docker.com)
-* [Let's Encrypt](https://letsencrypt.org) certificate
+* [Let's Encrypt](https://letsencrypt.org) certificate!
 

@@ -13,12 +13,4 @@ Um jogo em 2D feito com a GODOT Engine.
 
 [Site Oficial](https://hubdino.me/emotions/)
 
-[Itch.io]() 
-
-* [MAZES]()
-
-![IMG-mazes](mazes.png)
-
-Jogo criado com a GODOT engine e programação procedural.
-
-[Itch.io]()
+[Itch.io](https://hubdinogames.itch.io/e-motions) 

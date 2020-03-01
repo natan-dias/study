@@ -5,11 +5,17 @@ slug = "about"
 
 Olá pessoal!
 
-Somos um HUB de criação, iniciado por um sonho: Nos tornarmos um estúdio de desenvolvimento!
+Somos um HUB de criação, iniciado com um sonho: Nos tornarmos um estúdio de desenvolvimento de jogos e aplicativos!
 
-Por hora, podemos prover sites estáticos e dinâmicos para pequenas e médias empresas.
+Também trabalhamos no desenvolvimento de sites HTML + CSS + JS.
 
-E agora também estamos desenvolvento um jogo mobile em Python e com a GODOT Engine.
+Por enquanto, estamos desenvolvendo um jogo para celular em Python e GODOT Engine. O jogo se chama "E-Motions" e já está em beta aberto na loja do Google Play.
+
+Confira nossa seção "Jogos" para mais informações.
+
+Inscreva-se em nosso canal para se manter atualizado!
+
+[YOUTUBE Hubdino](https://www.youtube.com/channel/UCLFVeJNoZgIbIShtiPIE4xw)
 
 ## Nossas Competências
 
