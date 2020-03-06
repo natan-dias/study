@@ -18,8 +18,6 @@
       <guid>/pt-br/games.html</guid>
       <description>Confira nossos jogos!  E-Motions  Um jogo em 2D feito com a GODOT Engine.
 Site Oficial
-Itch.io
- MAZES  Jogo criado com a GODOT engine e programação procedural.
 Itch.io</description>
     </item>
     
@@ -39,10 +37,11 @@ Itch.io</description>
       
       <guid>/pt-br/about.html</guid>
       <description>Olá pessoal!
-Somos um HUB de criação, iniciado por um sonho: Nos tornarmos um estúdio de desenvolvimento!
-Por hora, podemos prover sites estáticos e dinâmicos para pequenas e médias empresas.
-E agora também estamos desenvolvento um jogo mobile em Python e com a GODOT Engine.
-Nossas Competências  Sites estáticos com Hugo Sites dinâmicos com HTML, CSS and JS Desenvolvimento em Go Desenvolvimento em Python GameDev com GODOT AWS e Docker Certificado Let&#39;s Encrypt  </description>
+Somos um HUB de criação, iniciado com um sonho: Nos tornarmos um estúdio de desenvolvimento de jogos e aplicativos!
+Também trabalhamos no desenvolvimento de sites HTML + CSS + JS.
+Por enquanto, estamos desenvolvendo um jogo para celular em Python e GODOT Engine. O jogo se chama &amp;ldquo;E-Motions&amp;rdquo; e já está em beta aberto na loja do Google Play.
+Confira nossa seção &amp;ldquo;Jogos&amp;rdquo; para mais informações.
+Inscreva-se em nosso canal para se manter atualizado!</description>
     </item>
     
   </channel>
