@@ -61,6 +61,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* To make things better, you can schedule a task to do a netcat or a telnet to any port. With that we can stop any node without user interferance.
