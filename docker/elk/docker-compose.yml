@@ -1,0 +1,82 @@
+version: '3.2'
+services:
+  elasticsearch:
+    image: custom-elastic
+    container_name: elastic
+    build: ./elasticsearch
+    #depends_on:
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - type: volume
+        source: elasticsearch
+        target: /docker/elk/data
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 500M
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xmx256m -Xms256m"
+      - ELASTIC_PASSWORD=changeme
+      - xpack.ml.enabled=false
+    networks:
+      - elk 
+  logstash:
+    image: custom-logstash
+    container_name: logstash
+    build: ./logstash
+    volumes:
+      - type: bind
+        source: ./logstash/pipeline
+        target: /usr/share/logstash/pipeline
+        read_only: true
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 500M
+    ports:
+      - "5000:5000"
+      - "9600:9600"
+    environment:
+      - "LS_JAVA_OPTS=-Xmx256m -Xms256m"
+      - http.host=0.0.0.0
+      - xpack.monitoring.elasticsearch.hosts=["http://elastic:9200"]
+      - xpack.monitoring.enabled=true
+      - xpack.monitoring.elasticsearch.username=admin
+      - xpack.monitoring.elasticsearch.password=changeme
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+  kibana:
+    image: custom-kibana
+    container_name: kibana
+    build: ./kibana
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 500M
+    ports:
+      - "5601:5601"
+    environment:
+      - server.name=kibana
+      - server.host=0
+      - elasticsearch.hosts=["http://elastic:9200"]
+      - xpack.monitoring.ui.container.elasticsearch.enabled=true
+      - elasticsearch.username=elastic
+      - elasticsearch.password=changeme
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+  elk:
+    driver: bridge
+volumes:
+  elasticsearch:
