@@ -1,17 +1,15 @@
 version: '3.2'
 services:
   elasticsearch:
-    image: custom-elastic
+    image: elasticsearch:7.7.1
     container_name: elastic
-    build: ./elasticsearch
-    #depends_on:
     ports:
       - "9200:9200"
       - "9300:9300"
     volumes:
       - type: volume
         source: elasticsearch
-        target: /docker/elk/data
+        target: /usr/share/elasticsearch/data
     deploy:
       resources:
         limits:
@@ -25,9 +23,8 @@ services:
     networks:
       - elk 
   logstash:
-    image: custom-logstash
+    image: logstash:7.7.1
     container_name: logstash
-    build: ./logstash
     volumes:
       - type: bind
         source: ./logstash/pipeline
@@ -53,9 +50,8 @@ services:
     depends_on:
       - elasticsearch
   kibana:
-    image: custom-kibana
+    image: kibana:7.7.1
     container_name: kibana
-    build: ./kibana
     deploy:
       resources:
         limits:
