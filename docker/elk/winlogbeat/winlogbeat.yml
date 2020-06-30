@@ -18,24 +18,47 @@
 # visit the documentation for the complete details of each option.
 # https://go.es.io/WinlogbeatConfig
 winlogbeat.event_logs:
-  - name: Application
-    ignore_older: 72h
+  #- name: Application
+   # ignore_older: 72h
 
-  - name: System
+  #- name: System
 
   - name: Security
+    event_id: 4624,4634
     processors:
+      - drop_event:
+            when:
+                and:
+                  - equals:
+                        event.code: 4624
+                  - or:
+                        - regexp:
+                            winlog.event_data.TargetUserName: '.*\s'
+                        - regexp:
+                            winlog.event_data.TargetUserName: 'DWM\-[0-9]'
+                        - equals:
+                            winlog.event_data.TargetUserName: 'SYSTEM'
+                        - equals:
+                            winlog.event_data.TargetUserName: 'COMPUTERNAME$'
+      - drop_event:
+            when:
+                and:
+                  - equals:
+                        event.code: 4634
+                  - or:
+                        - regexp:
+                            winlog.event_data.TargetUserName: '.*\s'
+                        - regexp:
+                            winlog.event_data.TargetUserName: 'DWM\-[0-9]'
+                        - equals:
+                            winlog.event_data.TargetUserName: 'SYSTEM'
+                        - equals:
+                            winlog.event_data.TargetUserName: 'COMPUTERNAME$'
       - script:
           lang: javascript
           id: security
           file: ${path.home}/module/security/config/winlogbeat-security.js
 
-  - name: Microsoft-Windows-Sysmon/Operational
-    processors:
-      - script:
-          lang: javascript
-          id: sysmon
-          file: ${path.home}/module/sysmon/config/winlogbeat-sysmon.js
 
 #==================== Elasticsearch template settings ==========================
 
@@ -83,7 +106,7 @@ setup.kibana:
   # Scheme and port can be left out and will be set to the default (http and 5601)
   # In case you specify and additional path, the scheme is required: http://localhost:5601/path
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
-  host: "172.20.21.51:5601"
+  host: "IP-DO-HOST:5601"
 
   # Kibana Space ID
   # ID of the Kibana Space into which the dashboards should be loaded. By default,
@@ -110,7 +133,7 @@ setup.kibana:
 #-------------------------- Elasticsearch output ------------------------------
 output.elasticsearch:
   # Array of hosts to connect to.
-  hosts: ["172.20.21.51:9200"]
+  hosts: ["IP-DO-HOST:9200"]
 
   # Protocol - either `http` (default) or `https`.
   #protocol: "https"
@@ -123,7 +146,7 @@ output.elasticsearch:
 #----------------------------- Logstash output --------------------------------
 #output.logstash:
   # The Logstash hosts
-  #hosts: ["172.20.21.51:5044"]
+  #hosts: [":5044"]
 
   # Optional SSL. By default is off.
   # List of root certificates for HTTPS server verifications
@@ -181,4 +204,3 @@ processors:
 
 # This allows to enable 6.7 migration aliases
 #migration.6_to_7.enabled: true
-
