@@ -1,5 +1,5 @@
 variable "region" {
-  default     = "us-west-2"
+  default     = ""
   description = "main region"
 }
 
@@ -16,5 +16,5 @@ variable "ami" {
 }
 
 variable "key" {
-    default = "amazon_hubdino"
+    default = ""
 }
