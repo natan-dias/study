@@ -3,6 +3,6 @@ variable "regions" {
 }
 
 variable "domain" {
-  default = "curso-terraform.com"
+  default = ""
 
 }

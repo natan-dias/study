@@ -1,9 +1,9 @@
 variable "region" {
-  default = "us-east-1"
+  default = ""
 }
 
 variable "ami" {
-  default = "ami-0080e4c5bc078760e"
+  default = ""
 }
 
 variable "instance_type" {
@@ -15,5 +15,5 @@ variable "env" {
 }
 
 variable "key_pair_name" {
-  default = "cgasparoto"
+  default = ""
 }

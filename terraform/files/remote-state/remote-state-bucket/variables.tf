@@ -8,5 +8,5 @@ variable "env" {
 }
 
 variable "bucket_name" {
-  default = "curso-aws-terraform-remote-state"
+  default = ""
 }

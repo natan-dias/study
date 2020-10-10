@@ -9,7 +9,7 @@ locals {
 
 terraform {
   backend "s3" {
-    bucket = "curso-aws-terraform-remote-state-7c6f24b30f8aa751"
+    bucket = ""
     key = "ec2/ecs.tfstate"
     region = "sa-east-1"
   }

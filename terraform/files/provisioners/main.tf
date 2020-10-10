@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "curso-aws-terraform-remote-state-dev"
+    bucket = ""
     key    = "ec2/ec2.tfstate"
     region = "us-east-1"
   }
@@ -17,7 +17,7 @@ locals {
 
   # conn_key     = "${tls_private_key.pkey.private_key_pem}"
 
-  conn_key = "${file("~/Downloads/Firefox/cleber.pem")}"
+  conn_key = "${file("")}"
 }
 
 resource "aws_instance" "web" {
@@ -72,6 +72,6 @@ resource "tls_private_key" "pkey" {
 }
 
 resource "aws_key_pair" "keypair" {
-  key_name   = "cgasparoto-${var.env}"
+  key_name   = "-${var.env}"
   public_key = "${tls_private_key.pkey.public_key_openssh}"
 }

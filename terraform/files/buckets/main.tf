@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "my-tf-test-bucket-hubdino000001"
+  bucket = "my-tf-test-bucket0000001"
   acl    = "private"
 
   tags = {
