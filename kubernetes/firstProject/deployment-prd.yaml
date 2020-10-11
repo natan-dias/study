@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+    name: php-site-prd
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            app: php-site-prd
+    template:
+        metadata:
+            labels:
+                app: php-site-prd
+        spec:
+            containers:
+                - name: php-site-prd
+                  image: hubdino/php-apache:2.0
+                  ports:
+                    - containerPort: 80
+                  imagePullPolicy: IfNotPresent
