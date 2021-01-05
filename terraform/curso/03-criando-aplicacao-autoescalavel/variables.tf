@@ -31,7 +31,7 @@ variable "instance_type" {
 }
 
 variable "key_pair" {
-  default = "cleber"
+  default = ""
 }
 
 variable "enabled_metrics" {
