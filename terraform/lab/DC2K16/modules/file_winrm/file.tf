@@ -12,7 +12,7 @@
       password    = random_string.winrm_password.result
       insecure    = true
       timeout     = "4m"
-      private_key = "./aws_windows.pem"
+      private_key = ""
       https       = false
     }
   }
@@ -33,7 +33,7 @@
       password    = random_string.winrm_password.result
       insecure    = true
       timeout     = "4m"
-      private_key = "./aws_windows.pem"
+      private_key = ""
       https       = false
     }
   }
@@ -48,7 +48,7 @@
     connection {
         host = aws_instance.w2k16.public_ip
         type = "winrm"
-        user = "admin"
+        user = ""
         password = "random_string.winrm_password.result"
         }
 }
