@@ -1,5 +1,4 @@
 FROM fedora
-MAINTAINER https://natandino.github.io/docker
 
 RUN dnf -y update && dnf clean all
 RUN dnf -y install nginx && dnf clean all
