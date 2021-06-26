@@ -1,0 +1,8 @@
+- name: Uninstall MSI package on remote windows host
+  hosts: HOST-VAR
+  tasks:
+    - name: Uninstall MSI package without product ID
+      win_package:
+        path: C:\Temp\ANY_PACKAGE.msi
+        state: absent
+

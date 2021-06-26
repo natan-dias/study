@@ -1,0 +1,12 @@
+- name: Copy MSI from Control host to remote and install on remote windows host
+  hosts: HOST-VAR
+  tasks:
+    - name: Copy a single file
+      win_copy:
+        src: /ansible_playbooks/files/ANY_PACKAGE.msi
+        dest: C:\Temp\ANY_PACKAGE.msi
+    - name: Install MSI package
+      win_package:
+        path: C:\Temp\ANY_PACKAGE.msi
+        state: present
+

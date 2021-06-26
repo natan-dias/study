@@ -1,0 +1,17 @@
+- name: Copy MSI from control host to remote and install on remote windows host
+  hosts: HOST-VAR
+  tasks:
+    - name: Copy a single file
+      win_copy:
+        src: /ansible_playbooks/files/kb5003681.msu
+        dest: C:\Temp\kb5003681.msu
+    - name: Install MSU KB package with validation
+      win_hotfix:
+        hotfix_kb: KB5003681
+        source: C:\Temp\kb5003681.msu
+        state: present
+      register: hotfix_install
+    #- win_reboot:
+    #  when: hotfix_install.reboot_required
+# To reboot after installation, just uncomment "win_reboot" lines
+
