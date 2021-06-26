@@ -18,6 +18,7 @@ Para acessar os servidores remotos via WinRM é necessário configurar os Group_
 Para criar:
 
 > openssl rand -base64 2048 > ansible-vault.pass
+>
 > ansible-vault encrypt vault-test.yml --vault-password-file=./ansible-vault.pass
 
 Para executar playbok com group_vars encriptado:
