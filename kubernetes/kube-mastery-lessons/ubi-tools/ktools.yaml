@@ -31,7 +31,7 @@ spec:
   serviceAccountName: ktools
   containers:
   - name: kube-tools
-    image: natandias1/kube-tools:0.1
+    image: natandias1/kube-tools:latest
     imagePullPolicy: Always
     stdin: true
     tty: true
